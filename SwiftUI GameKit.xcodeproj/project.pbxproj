@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		405D7A0D28F866CA00191CB6 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 405D7A0C28F866CA00191CB6 /* SocketIO */; };
+		4063151628FABC9700221262 /* Port.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4063151528FABC9700221262 /* Port.swift */; };
+		4063151A28FAC6CD00221262 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4063151928FAC6CD00221262 /* SocketService.swift */; };
+		4063151E28FACB6300221262 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4063151D28FACB6300221262 /* GameService.swift */; };
 		4083E2B828F8174F00CB99D7 /* SwiftUI_GameKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083E2B728F8174F00CB99D7 /* SwiftUI_GameKitApp.swift */; };
 		4083E2BA28F8174F00CB99D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083E2B928F8174F00CB99D7 /* ContentView.swift */; };
 		4083E2BC28F8175000CB99D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4083E2BB28F8175000CB99D7 /* Assets.xcassets */; };
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4063151528FABC9700221262 /* Port.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Port.swift; sourceTree = "<group>"; };
+		4063151928FAC6CD00221262 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		4063151D28FACB6300221262 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		4083E2B428F8174F00CB99D7 /* SwiftUI GameKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI GameKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4083E2B728F8174F00CB99D7 /* SwiftUI_GameKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GameKitApp.swift; sourceTree = "<group>"; };
 		4083E2B928F8174F00CB99D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405D7A0D28F866CA00191CB6 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4063151728FAC6B000221262 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4063151828FAC6BD00221262 /* socketService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4063151828FAC6BD00221262 /* socketService */ = {
+			isa = PBXGroup;
+			children = (
+				4063151928FAC6CD00221262 /* SocketService.swift */,
+				4063151D28FACB6300221262 /* GameService.swift */,
+			);
+			path = socketService;
+			sourceTree = "<group>";
+		};
 		4083E2AB28F8174F00CB99D7 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +119,12 @@
 		4083E2B628F8174F00CB99D7 /* SwiftUI GameKit */ = {
 			isa = PBXGroup;
 			children = (
+				4063151728FAC6B000221262 /* Services */,
 				4083E2B728F8174F00CB99D7 /* SwiftUI_GameKitApp.swift */,
 				4083E2B928F8174F00CB99D7 /* ContentView.swift */,
 				4083E2BB28F8175000CB99D7 /* Assets.xcassets */,
 				4083E2BD28F8175000CB99D7 /* Preview Content */,
+				4063151528FABC9700221262 /* Port.swift */,
 			);
 			path = "SwiftUI GameKit";
 			sourceTree = "<group>";
@@ -143,6 +170,9 @@
 			dependencies = (
 			);
 			name = "SwiftUI GameKit";
+			packageProductDependencies = (
+				405D7A0C28F866CA00191CB6 /* SocketIO */,
+			);
 			productName = "SwiftUI GameKit";
 			productReference = 4083E2B428F8174F00CB99D7 /* SwiftUI GameKit.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 4083E2AB28F8174F00CB99D7;
+			packageReferences = (
+				405D7A0B28F866CA00191CB6 /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 4083E2B528F8174F00CB99D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4063151A28FAC6CD00221262 /* SocketService.swift in Sources */,
+				4063151628FABC9700221262 /* Port.swift in Sources */,
+				4063151E28FACB6300221262 /* GameService.swift in Sources */,
 				4083E2BA28F8174F00CB99D7 /* ContentView.swift in Sources */,
 				4083E2B828F8174F00CB99D7 /* SwiftUI_GameKitApp.swift in Sources */,
 			);
@@ -345,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -583,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		405D7A0B28F866CA00191CB6 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		405D7A0C28F866CA00191CB6 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 405D7A0B28F866CA00191CB6 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4083E2AC28F8174F00CB99D7 /* Project object */;
 }
